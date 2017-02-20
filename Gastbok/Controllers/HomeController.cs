@@ -16,9 +16,8 @@ namespace Gastbok.Controllers {
             return View();
         }
 
-        public ActionResult Contact() {
-            ViewBag.Message = "Your contact page.";
-
+        public ActionResult GastBok() {
+            
             return View();
         }
     }
