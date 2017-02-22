@@ -1,0 +1,15 @@
+﻿@model Gastbok.ViewModel.GastBokViewModel
+@{
+    ViewBag.Title = "Gästbok";
+}
+<h2>Bloggens Gästbok</h2>
+<p>Detta är min gästbok. Här kan ni skriva ett eget litet inlägg. Vill ni skriva ett inlägg måste ni logga in. Inloggningen hittar ni uppe i det högra hörnan.</p>
+@if (User.Identity.IsAuthenticated) {
+    Html.RenderPartial("_addcomment", Model.Comment);
+}
+
+<div>
+    @{Html.RenderPartial("_showcomments", Model);}
+</div>
+
+

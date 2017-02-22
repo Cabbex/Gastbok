@@ -1,0 +1,21 @@
+﻿@model Gastbok.Models.Comment
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            Håll det civiliserat tack.
+        </p>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm("PostComment", "GastBok")) {
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.TextData)
+                    @Html.TextAreaFor(m => m.TextData, new { @class = "form-control"})
+                </div>
+                    <button class="btn btn-default" type="submit">Spara</button>
+            }
+            <hr />
+        </div>
+    </div>

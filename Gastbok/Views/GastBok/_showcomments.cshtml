@@ -1,0 +1,18 @@
+﻿@model Gastbok.ViewModel.GastBokViewModel
+
+@foreach(var comment in Model.dbComments) { 
+<div class="row">
+    <div class="col-md-12">
+        <div class="well">
+            <div class="col-md-10 col-sm-6">
+                <p>Skriven av @comment.UserId</p>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <small>@comment.DateTime.Day/@comment.DateTime.Month/@comment.DateTime.Year</small>
+            </div>
+                <hr />
+                <p>@comment.TextData</p>
+        </div>
+    </div>
+</div>
+}

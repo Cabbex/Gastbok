@@ -1,13 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace Gastbok.Models {
     public class Comment {
+
         public int Id { get; set; }
+
         public DateTime DateTime { get; set; }
-        public long TextData { get; set; }
-        public ApplicationUser User { get; set; }
+
+        [Display(Name = "Skriv ett inlägg")]
+        public String TextData { get; set; }
+
+        public String UserId { get; set; }
     }
 }
